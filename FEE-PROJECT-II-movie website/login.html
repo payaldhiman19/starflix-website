@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Register</title>
+    <link rel="stylesheet" href="stylelogin.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="logo" width="200px">
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="series.html">Series</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <a href="index.html"><span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span></a>
+<!-- LOGIN -->
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form onsubmit="signIn(event);">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input class="input" type="email" id="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input class="input" type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label ><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit"class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+<!-- REGISTER -->
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form onsubmit="signUp(event, true);">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" id="user1" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" id="email1" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" id="password1" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label ><input type="checkbox" id="cbox2">I agree to the terms and conditions</label>
+                </div>
+                <button type="submit"class="btn" >Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        const wrapper=document.querySelector('.wrapper');
+
+        const loginLink=document.querySelector('.login-link');
+
+        const registerLink=document.querySelector('.register-link');
+
+        registerLink.addEventListener('click',()=>{wrapper.classList.add('active')});
+
+        loginLink.addEventListener('click',()=>{wrapper.classList.remove('active')});
+        const signUp = e => {
+            let checkbox = document.querySelector("#cbox2")
+            let fname = document.getElementById('user1').value,
+                email = document.getElementById('email1').value,
+                pwd = document.getElementById('password1').value;
+
+            let formData = JSON.parse(localStorage.getItem('formData')) || [];
+
+            let exist = formData.length &&
+                JSON.parse(localStorage.getItem('formData')).some(data =>
+                    data.fname.toLowerCase() == fname.toLowerCase()
+                );
+            if(!checkbox.checked)
+            alert("Please Accept Terms And Conditions")
+            else if (!exist) {
+                formData.push({ fname, email, pwd});
+                localStorage.setItem('formData', JSON.stringify(formData));
+                window.location.href="login.html";
+                alert("Account Created.");
+            }
+                else {
+                    alert("You Have Already Signed Up");
+                    window.location.href="login.html";
+                }
+                e.preventDefault();
+            }
+            function signIn(e) {
+                e.preventDefault();
+                let email = document.getElementById('email').value, pwd = document.getElementById('password').value;
+                let formData = JSON.parse(localStorage.getItem('formData')) || [];
+                localStorage.setItem("email",JSON.stringify(email));
+
+                let exist = formData.length && JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
+                if (!exist) {
+                    alert("Please Enter Registered E-mail Id.");
+                }
+                else {
+                    window.location.href="index2.html";
+                    alert("Log In Successful")
+                }
+            }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

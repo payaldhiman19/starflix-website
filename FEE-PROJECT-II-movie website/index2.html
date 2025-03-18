@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styleindex2.css">
+</head>
+<body>
+ 
+    <div class="navigation">
+        <img src="logo.png" alt="logo" width="200px">
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="contact.html">Contact</a>
+        <div class="search-bar">
+                <input type="text" id="input-box" placeholder="Movie, Series, Genre">
+                <button onclick="addTask()" class="search-button">Search</button>
+            <ul id="list-container">
+            </ul>
+        </div>
+        <a href="#"><button id="profile-btn">Profile</button></a>
+        <img src="profilelogo.jpg" alt="" id="profile-photo">
+    </div>
+    <hr style="color: rgb(252, 223, 223);">
+    <div class="container-fluid">
+        <br><h2 id="heading">For You</h2>
+        <div class="row row-cols-6">
+            <img class="zoom" src="hipapa.jpg">
+            <img class="zoom" src="salaar.jpg">
+            <img class="zoom" src="chennaiexpress.jpg">
+            <img class="zoom" src="gangubaikathiawadi.jpg" >
+            <img class="zoom" src="jabwemet.jpg">
+            <img class="zoom" src="thegirlontrain.jpg">
+        </div>
+        <br><br><h2 id="heading">Popular Series</h2>
+        <div class="row row-cols-6">
+            <img class="zoom" src="mismatched.jpg" >
+            <img class="zoom" src="thesummeriturnedpretty.jpg">
+            <img class="zoom" src="xokitty.jpg" >
+            <img class="zoom" src="littlethings.jpg">
+            <img class="zoom" src="collegeromance.avif" >
+            <img class="zoom" src="asur.jpg">
+        </div>
+    </div><br>
+    <hr style="color: rgb(252, 223, 223);">
+    
+   
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(117, 87, 87);
+            padding: 1%;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url('bg-image.jpg') ;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+        }
+        .navigation a {
+            position: relative;
+            font-size: 1.1em;
+            color:rgb(252, 223, 223);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 40px;
+        }
+        .navigation a::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 0;
+            bottom: -6px;
+            background-color:rgb(252, 223, 223);
+            border-radius: 5px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform .5s;
+        }
+        .navigation a:hover::after{
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+        #heading{
+            color: rgb(252, 223, 223); 
+            font-size: 40px; 
+            text-align: center;
+        }
+        #head2{
+            color: rgb(252, 223, 223);
+            text-align: center;
+            font-size: 20px;
+        }
+        #img-logo{
+            font-size: 35px;
+            color: rgb(252, 223, 223);
+            text-shadow: 0px 0px 5px rgb(220, 193, 193), 0px 0px 10px rgb(252, 223, 223), 0px 0px 10px rgb(252, 223, 223),
+                0px 0px 20px #b393d3;
+        }
+        .container {
+            position: relative;
+        }
+        .image {
+            opacity: 1; 
+            display: block; 
+            width: 100%; 
+            height: 350px;
+            transition: .5s ease;
+        }
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            align-items: center;
+            top: 45%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%)
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+            -ms-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: transparent;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            padding:1px 0px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="navigation">
+        <img src="logo.png" alt="logo" width="200px">
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="contact.html">Contact</a>
+    </div><br>
+
+    <h1 id="heading">Welcome to the Movies section</h1>
+    <h2 id="head2">Select your favourite Genre</h2>
+        
+<section>
+    <h2 id="img-logo">Rom-Com</h2>
+        <div class="row row-cols-6">
+            <div class="container">
+                <img src="hipapa.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>HI PAPA</h4><br> A doting father and his 6-year-old daughter find their lives taking a dramatic turn when the woman he loves marries someone else.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="jabwemet.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>JAB WE MET</h4><br>Aditya, a heartbroken business tycoon, aimlessly boards a train to escape his depressing life. He meets Geet, a bubbly Punjabi girl, and gets pulled into her crazy life.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="sanamterikasam.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>SANAM TERI KASAM</h4><br>When Saraswati's father throws her out of the house, Inder stands with her against all odds and this brings them close to each other. However, destiny has its own plans to separate them.</div>
+            </div>
+            </div><div class="container">
+                <img src="toallboysihavelovedbefore.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>TO ALL THE BOYS I'VE LOVED BEFORE</h4><br>To All the Boys is a franchise consisting of American teenage romance installments, including three feature films and a spin-off television series, based on the titular trilogy of novels written by Jenny Han.</div>
+            </div>
+            </div><div class="container">
+                <img src="chennaiexpress.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>CHENNAI EXPRESS</h4><br>Rahul, a young man, sets out to immerse his late grandfather's ashes at Rameshwaram. However, when he helps Meena, a runaway bride, board a train, he has to face the ire of her criminal family.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="JaaneTuYaJaaneNa.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>JAANE TU YA JAANE NA</h4><br>Best friends Jai and Aditi make for a perfect couple but refuse to consider a romantic relationship. However, when they start dating other people, they realise that they are actually in love.</div>
+            </div>
+        </div><br>
+</section><br>
+<section>
+    <h2 id="img-logo">Drama/Crime</h2>
+        <div class="row row-cols-6">
+            <div class="container">
+                <img src="thegirlonthetrain2.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>THE GIRL ON THE TRAIN</h4><br>On her lonely train journeys post-divorce, Rachel sees Scott and Megan and perceives them to be an ideal couple. But when Megan is known to go missing, Rachel gets dragged into the investigation.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="mardaani.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>MARDAANI</h4><br>Senior Inspector Shivani Shivaji Roy is a strong dedicated officer of the Mumbai Police force. She works hard to uncover a Delhi-based child trafficking cartel.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="Drishyam2.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>DRISHYAM 2</h4><br>Seven years after facing traumatic events, the Salgaonkars have moved on with life. However, unforeseen circumstances threaten to bring dark truths to light.</div>
+            </div>
+            </div><div class="container">
+                <img src="johnwick.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>JOHN WICK</h4><br>John Wick is an American neo-noir action film series and media franchise created by Derek Kolstad. It centers around the titular character, a legendary hitman who is reluctantly drawn back into the criminal underworld after retiring.</div>
+            </div>
+            </div><div class="container">
+                <img src="gangubaikathiawadi.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>GANGUBAI KATHIAWADI</h4><br>After being duped and sold to a brothel, a young woman takes control of the world she was once a pawn in, utilising her underworld connections to rule it.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="gumraah.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>GUMRAAH</h4><br>When a young man is found dead, a murder investigation is underway to find the culprit. However, complications arise when the police find the suspect's uncanny look alike.</div>
+            </div>
+        </div><br>
+</section><br>
+<section>
+    <h2 id="img-logo">Action/Thriller</h2>
+        <div class="row row-cols-6">
+            <div class="container">
+                <img src="Extraction2.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>EXTRACTION 2</h4><br>Back from the brink of death, commando Tyler Rake embarks on a dangerous mission to save a ruthless gangster's imprisoned family.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="beast.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>BEAST</h4><br>Former RAW agent Veera must face his fears when a terrorist organisation holds him hostage in a mall along with other visitors and demands the release of their leader, who was captured by Veera.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="salaar.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>SALAAR</h4><br>A gang leader makes a promise to a dying friend by taking on other criminal gangs.</div>
+            </div>
+            </div><div class="container">
+                <img src="wazir.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>WAZIR</h4><br>When his daughter is killed by the terrorist he is chasing, Daanish, a cop, swears to seek revenge. He finds a confidante in Pandit, an unassuming grand master, also mourning the loss of his daughter.</div>
+            </div>
+            </div><div class="container">
+                <img src="nh10.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>NH 10</h4><br>While on a road trip, Meera and Arjun witness an honour killing committed by a powerful gangster, Satbir. However, the latter soon starts pursuing the couple to eliminate them.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="jawan.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>JAWAN</h4><br>A man is driven by a personal vendetta to rectify the wrongs in society, while keeping a promise made years ago. He comes up against a monstrous outlaw with no fear, who has caused extreme suffering to many.</div>
+            </div>
+        </div><br>
+</section><br>
+<section>
+    <h2 id="img-logo">Comedy</h2>
+        <div class="row row-cols-6">
+            <div class="container">
+                <img src="dreamgirl2.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>DREAMGIRL 2</h4><br>Karam secretly turns his female alter ego into a dancer and woos a millionaire's son in hopes of clearing his family debts and impressing his fiancée's father.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="fukrey.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>FUKREY</h4><br>Hunny, Choocha, Lali and Zafar want to make easy money and approach the notorious Bholi to invest in their plan. But when they lose her money, they must come up with a plan or face the consequences.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="phirherapheri.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>PHIR HERA PHERI</h4><br>A twist of fate changes the lives of Raju, Shyam and Baburao when they get cheated by a fraudster. They must now find another way to repay the loan taken from a dreaded gangster.</div>
+            </div>
+            </div><div class="container">
+                <img src="3idiots.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>3 IDIOTS</h4><br>In college, Farhan and Raju form a great bond with Rancho due to his refreshing outlook. Years later, a bet gives them a chance to look for their long-lost friend whose existence seems rather elusive.</div>
+            </div>
+            </div><div class="container">
+                <img src="housefull.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>HOUSEFULL</h4><br>Housefull is an Indian comedy film series. The series stars Akshay Kumar and Ritesh Deshmukh in all the films. The first two films Housefull and Housefull 2 were directed by Sajid Khan.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="golmall.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>GOLMAL</h4><br>Golmaal is an Indian comedy film series directed by Rohit Shetty, with four installments to date, the first three produced by Dhilin Mehta, the fourth by Shetty and Sangeeta Ahir and the fifth which is a spin off is produced by Shetty with Bhushan Kumar.</div>
+            </div>
+        </div><br>
+</section><br>
+<section>
+    <h2 id="img-logo">Horror</h2>
+        <div class="row row-cols-6">
+            <div class="container">
+                <img src="theconjuring.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>THE CONJURING</h4><br>Rod and Carolyn find their pet dog dead under mysterious circumstances and experience a spirit that harms their daughter Andrea. They finally call investigators who can help them get out of the mess.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="durgamati.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>DURGAMATI</h4><br>A government officer seeking justice for a man gets embroiled in a conspiracy. While trying to prove her innocence, she gets possessed by a ghost.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="thenun.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>THE NUN</h4><br>A priest and a novice arrive in Romania to investigate the death of a young nun. However, things take an ugly turn after they encounter a supernatural force.</div>
+            </div>
+            </div><div class="container">
+                <img src="bulbul.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>BULBBUL</h4><br>A child bride grows into an enigmatic woman ruling over her household, hiding her painful past, as supernatural murders of men plague her village.</div>
+            </div>
+            </div><div class="container">
+                <img src="bhoolbhulayia.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>BHOOL BHULAIYAA</h4><br>An NRI and his wife decide to stay in his ancestral home, paying no heed to the warnings about ghosts. Soon, inexplicable occurrences cause him to call a psychiatrist to help solve the mystery.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="stree.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>STREE</h4><br>The people of Chanderi live under constant fear of Stree, the spirit of a woman who attacks men at night during festivals. Vicky, along with his friends, decides to unravel the mystery.</div>
+            </div>
+        </div><br>
+</section><br>
+<section>
+    <h2 id="img-logo">SRK's Rom-Com</h2>
+        <div class="row row-cols-6">
+            <div class="container">
+                <img src="ddlj.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>DILWALE DHULANIYA LE JAYENGE</h4><br>Raj and Simran meet during a trip across Europe and the two fall in love. However, when Raj learns that Simran is already promised to another, he follows her to India to win her and her father over.
+                  </div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="kuchkuchhotahai.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>KUCH KUCH HOTA HAI</h4><br>A tomboyish Anjali loves Rahul, her best college pal, but is anguished when he decides to wed Tina, a fellow collegian. Eight years later, widower Rahul's daughter is told to reunite him with Anjali.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="kalhonaho.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>KAL HO NAA HO</h4><br>Aman inserts positivity and liveliness into the life of Naina, a defeatist MBA student with familial problems. Naina, smitten with him, wishes to wed him, but is unaware of his terminal illness.</div>
+            </div>
+            </div><div class="container">
+                <img src="omshantiom.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>OM SHANTI OM</h4><br>Om, a junior film artist, is smitten by Shantipriya, a renowned actress, but is killed while trying to save her from a fire accident. Thirty years later, he is reborn and sets out to avenge her death.</div>
+            </div>
+            </div><div class="container">
+                <img src="rabnebnadijodi.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>RAB NE BANA DI JODI</h4><br>Surinder, a simple man, falls for a vivacious Tani and gets married to her. In order to impress her, he undergoes a complete makeover and becomes Raj.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="veerzara.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                  <div class="text"><h4>VEER-ZAARA</h4><br>Love blooms between an Indian pilot, Veer, and a Pakistani girl, Zaara. As Veer spends his years in a Pakistani prison, Zaara believes him to be dead and devotes her life to his village in India.</div>
+            </div>
+        </div><br>
+</section>
+</body>
+</html>

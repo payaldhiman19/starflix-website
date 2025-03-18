@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+        padding: 1%;
+            background-color: rgb(117, 87, 87);
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url('bg-image.jpg') no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .navigation a {
+            position: relative;
+            font-size: 1.2em;
+            color:rgb(252, 223, 223);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 40px;
+        }
+        .navigation a::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 0;
+            bottom: -6px;
+            background-color:rgb(252, 223, 223);
+            border-radius: 5px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform .5s;
+        }
+        .navigation a:hover::after{
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+        #heading{
+            color: rgb(252, 223, 223); 
+            font-size: 40px; 
+            text-align: center;
+            
+        }
+        #head2{
+            color: rgb(252, 223, 223);
+            text-align: center;
+            font-size: 20px;
+        }
+        #img-logo{
+            font-size: 35px;
+            color: rgb(252, 223, 223);
+            text-shadow: 0px 0px 5px rgb(220, 193, 193), 0px 0px 10px rgb(252, 223, 223), 0px 0px 10px rgb(252, 223, 223),
+                0px 0px 20px #b393d3;
+        }
+        #zoom{
+            transition: transform .2s;
+            padding: 50px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        .zoom:hover{
+            -ms-transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+        .container {
+            position: relative;
+        }
+        .image {
+            opacity: 1; 
+            display: block; 
+            width: 100%; 
+            height: 350px;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            align-items: center;
+            top: 45%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%)
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+            -ms-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: transparent;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            padding:1px 0px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="navigation">
+        <img src="logo.png" alt="logo" width="200px">
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="contact.html">Contact</a>
+    </div><br>
+    <h1 id="heading">Welcome to the Series section</h1>
+    <h2 id="head2">Select your favourite Genre</h2>
+        
+<section>
+    <h2 id="img-logo">Rom-Com</h2>
+        <div class="row row-cols-6">
+            <div class="container">
+                <img src="collegeromance.avif" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>COLLEGE ROMANCE</h4><br>Three friends, Karan, Trippy and Naira, are inseparable and begin their college life together. However, when they fall in love, they face challenges in their romantic lives.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="mismatched.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>MISMATCHED</h4><br>After being set-up by their families, two teenagers strike up a tentative friendship at their summer programme.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="thesummeriturnedpretty.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>THE SUMMER I TURNED PRETTY</h4><br>A girl is caught in a love triangle between two brothers as she deals with her first love and first heartbreak during the perfect summer.</div>
+            </div>
+            </div><div class="container">
+                <img src="xokitty.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>XO, KITTY</h4><br>Kitty, the youngest of the Covey sisters, embarks on a quest to find true love.</div>
+            </div>
+            </div><div class="container">
+                <img src="littlethings.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>LITTLE THINGS</h4><br>Kavya Kulkarni and Dhruv Vats, a couple who is in a live-in relationship, attempt to balance their personal and professional lives.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="neverkissyourbestfrind.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>NEVER KISS YOUR BESTFRIEND</h4><br>Estranged friends Tanie and Sumer reunite coincidentally after years of separation when they both end up working in London.</div>
+            </div>
+        </div>
+</section><br>
+<section>
+    <h2 id="img-logo">Action/Thriller</h2>
+        <div class="row row-cols-6">
+            <div class="container">
+                <img src="asur.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>ASUR</h4><br>Forensic expert turned teacher Nikhil lives a quiet life with his wife and daughter until he joins forces with his old mentor to catch a serial killer who believes himself the incarnation of the asura Kali.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="thefamilyman.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>THE FAMILY MAN</h4><br>Srikant Tiwari is a middle-class man who also serves as a world-class spy; he tries to balance his familial responsibilities with those at the highly secretive special cell of the National Intelligence Agency.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="therecruit.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>THE RECRUIT</h4><br>A fledgling CIA lawyer gets caught up in a dangerous game of international politics when a former asset threatens to expose the nature of her relationship with the agency unless they clear her name.</div>
+            </div>
+            </div><div class="container">
+                <img src="breatheintoyourshadows.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>BREATHE: INTO YOUR SHADOWS</h4><br>A successful psychiatrist and his wife will find themselves forced to go beyond all limits to save their daughter, kidnapped from a birthday party.</div>
+            </div>
+            </div><div class="container">
+                <img src="moneyheist.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>MONEY HEIST</h4><br>When the national mint and a touring school group are held hostage by robbers, police believe that the thieves have no way out. Little do they know that the thieves have a bigger plan in store.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="thenightagent.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>THE NIGHT AGENT</h4><br>While monitoring an emergency line, an FBI agent answers a call that plunges him into a deadly conspiracy involving a mole at the White House.</div>
+            </div>
+        </div>
+</section><br>
+<section>
+    <h2 id="img-logo">Drama/Crime</h2>
+        <div class="row row-cols-6">
+            <div class="container">
+                <img src="farzi.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>FARZI</h4><br>Sunny, a brilliant small-time artist is propelled into the high-stakes world of counterfeiting when he creates the perfect fake currency note.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="rudra.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>RUDRA: THE EDGE OF DARKNESS</h4><br>Rudra: The Edge of Darkness is an Indian psychological crime thriller television series, created for Disney+ Hotstar. It is a remake of British series Luther. The series stars Ajay Devgn, Raashii Khanna and Esha Deol.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="theboys.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>THE BOYS</h4><br>Superheroes are often as popular as celebrities, as influential as politicians, and sometimes even as revered as gods. When it's the powerless against the super powerful, the Boys head out on a heroic quest to expose the truth about the Seven and Vought.</div>
+            </div>
+            </div><div class="container">
+                <img src="delhicrime.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>DELHI CRIME</h4><br>Based on a Delhi gang rape case, this crime drama follows the Delhi Police investigation into the finding of the men who perpetrated the crime.</div>
+            </div>
+            </div><div class="container">
+                <img src="scoop.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>SCOOP</h4><br>The shocking murder of a journalist thrusts a crime reporter into the nexus of police, media and the Mumbai underworld as she fights for justice.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="rananaidu.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>RANA NAIDU</h4><br>Rana Naidu can solve any problem in Bollywood; however, when his father is released from prison, the one mess he can't handle may be his own.</div>
+            </div>
+        </div>
+</section><br>
+<section>
+    <h2 id="img-logo">Horror</h2>
+        <div class="row row-cols-6">
+            <div class="container">
+                <img src="thevampirediaries.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>THE VAMPIRE DIARIES</h4><br>On her first day at high school, Elena meets Stefan and immediately feels a connection with him. However, what she does not know is that Stefan and his brother, Damon, are in fact vampires.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="sweethome.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>SWEET HOME</h4><br>As humans turn into savage monsters, one troubled teenager and his neighbours fight to survive and to hold onto their humanity.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="allofusaredead.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>ALL OF ARE DEAD</h4><br>Trapped students must escape their high school which has become ground zero for a zombie virus outbreak.</div>
+            </div>
+            </div><div class="container">
+                <img src="mansion24.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>MANSION 24</h4><br>Mansion 24 is an Indian Telugu-language horror thriller television series written by Mayukh Adithya and directed by Ohmkar.</div>
+            </div>
+            </div><div class="container">
+                <img src="ghoul.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>GHOUL</h4><br>When a new prisoner arrives at a military detention center exhibiting eerie behavior, young interrogator Nida Rahim searches for the truth. Her quest becomes a battle for survival when the prisoner, sect leader Ali Saeed, turns the tables on Nida and the other interrogators, exposing their most shameful secrets.</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="hellbound.jpg" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text"><h4>HELLBOUND</h4><br>Unearthly beings deliver condemnations, sending individuals to hell and giving rise to a religious group founded on the idea of divine justice.</div>
+            </div>
+        </div>
+</section> 
+</body>
+</html>
